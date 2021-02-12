@@ -12,6 +12,8 @@ class Marks_exams(models.Model):
 class Teachers(models.Model):
     surname_of_teacher = models.CharField(max_length=100)
     photo = models.ImageField()
+    def my_method(self):
+        return 45
 #Teachers.objects.filter(surname_of_teacher='Корнеева').update(surname_of_teacher='Филатов')
 class Knowledge_level(models.Model):
     result_of_exams=models.CharField(max_length=100)

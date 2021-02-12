@@ -148,6 +148,7 @@ def main (request):
         "index.html",
         {"title": _("Main page"),"cart":Teachers.objects.filter(id=3)[0]}
     )
+    x=43
     response.set_cookie(
         settings.LANGUAGE_COOKIE_NAME, "pl",
         max_age=settings.LANGUAGE_COOKIE_AGE,

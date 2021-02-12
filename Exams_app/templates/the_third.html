@@ -1,0 +1,40 @@
+{% extends "index.html" %}
+{% block content%}
+<div class="container-fluid"> <!--основная часть свйта-->
+    <div class="row">
+        <div class="col-2" style="padding: 0px">
+            <div class="card card-body bg-light" style="height: 500px" align="center">
+                Колонка 1
+            </div>
+        </div>
+        <div class="col-8" style="padding: 0px">
+            <div class="card card-body bg-light" style="height: 500px" align="center">
+                {% block new %}
+                Зарегистрироваться на сайте
+                    <form method="post" action="/the_third" >
+                         <div class="input-group mb-3">
+                            <span class="input-group-text" id="basic-addon1">@</span>
+                                <input  id="input2" type="text" class="form-control" placeholder="Username" aria-label="Username"  aria-describedby="basic-addon1" name="username">
+                         </div>
+                        <div class="col-auto">
+                            <label for="inputPassword2" class="visually-hidden"></label>
+                                <input id="password_2" type="password" class="form-control" id="inputPassword2" placeholder="Password" name="password">
+                        </div>
+                         <div class="col-auto"><br>
+                            <button id="button2" type="submit" class="btn btn-primary mb-3">Подтвердить</button>
+                         </div>
+                    </form>
+                <p><a href="/my_html">Вернуться на главную страницу</a></p>
+                {% endblock %}
+            </div>
+        </div>
+         <div class="col-2" style="padding: 0px" >
+            <div class="card card-body bg-light" style="height: 500px" align="center">
+                Колонка
+            </div>
+         </div>
+    </div>
+</div>
+
+{% endblock %}
+

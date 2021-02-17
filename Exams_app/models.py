@@ -11,6 +11,7 @@ class Marks_exams(models.Model):
     russian = models.IntegerField(default=0,db_index=True)
 class Teachers(models.Model):
     surname_of_teacher = models.CharField(max_length=100)
+    years_old=models.IntegerField(default=0,db_index=True)
     photo = models.ImageField()
     def my_method(self):
         return 45

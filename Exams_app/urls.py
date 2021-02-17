@@ -12,6 +12,7 @@ urlpatterns = [
     path("contacts",contacts_of_us),
     path("ajax_path",ajax_path),
     path("cheak_login",ajax_path_2),
-    #path("ajax_path_reg",ajax_path_reg)
-    path("bd_index",experiment)
+    #path("ajax_path_reg",ajax_path_reg),
+    path("bd_index",experiment),
+    path("teachers",server)
 ]

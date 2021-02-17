@@ -5,6 +5,9 @@ from django.contrib.auth import logout
 from django.http import HttpResponse,HttpResponseRedirect
 from django.contrib.auth.models import User
 from django.http import JsonResponse
+import requests
+from Exams_app.models import Teachers
+
 
 def index(request):
     lesson=" "
@@ -185,3 +188,12 @@ def main_2(request):
             "surname":surname
         }
     )
+
+def server(request):
+    Teachers.objects.filter(
+        id=request.POST["id"]
+    ).update(
+        surname_of_teacher=request.POST["surname_of_teacher"],
+        years_old=int(request.POST["years_old"])
+    )
+    return JsonResponse({"Satus":"Ok"})
